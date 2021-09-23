@@ -1,0 +1,23 @@
+name: Public
+on:
+  push:
+    branches:
+    - public
+jobs:
+  public:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v1
+        with:
+            dotnet-version: '5.0.x'
+      - name: Restore
+        run: dotnet restore
+      - name: Build
+        run: dotnet build -c Release
+      - name: Run
+        run: dotnet run --project src -c Release
+      - name: Public
+        shell: cmd
+        run: echo published!

@@ -1,0 +1,4 @@
+src/bin/Debug
+src/bin/Release
+src/obj
+.vs
