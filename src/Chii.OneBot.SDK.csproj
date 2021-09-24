@@ -3,7 +3,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>preview</LangVersion>
     <Description>A OneBot SDK for Chii Deskband</Description>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
     <Authors>IchiroMihara</Authors>
     <PackageIcon>icon.png</PackageIcon>
     <PackageProjectUrl>https://github.com/MiharaIchiro/Chii.OneBot.SDK</PackageProjectUrl>
