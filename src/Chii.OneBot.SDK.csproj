@@ -5,7 +5,7 @@
     <Description>A OneBot SDK for Chii Deskband</Description>
     <Version>0.2.0</Version>
     <Authors>IchiroMihara</Authors>
-    <PackageIcon>icon.png"</PackageIcon>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageProjectUrl>https://github.com/MiharaIchiro/Chii.OneBot.SDK</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
