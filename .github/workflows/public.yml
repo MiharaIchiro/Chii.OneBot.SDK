@@ -16,8 +16,12 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build -c Release
-      - name: Run
-        run: dotnet run --project src -c Release
+      - name: publish on version change
+        id: publish_nuget
+        uses: rohith/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: src/Chii.OneBot.SDK.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
       - name: Public
         shell: cmd
         run: echo published!
