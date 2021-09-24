@@ -2,7 +2,7 @@ name: Public
 on:
   push:
     branches:
-    - public
+    - main
 jobs:
   public:
     runs-on: ubuntu-latest
@@ -16,8 +16,10 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build -c Release
-      - name: Run
-        run: dotnet run --project src -c Release
-      - name: Public
-        shell: cmd
-        run: echo published!
+      - name: publish on version change
+        id: publish_nuget
+        uses: rohith/publish-nuget@v2
+        with:
+          PROJECT_FILE_PATH: src/Chii.OneBot.SDK.csproj
+          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+          TAG_COMMIT: false

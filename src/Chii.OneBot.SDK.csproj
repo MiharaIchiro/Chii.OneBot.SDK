@@ -2,17 +2,18 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>preview</LangVersion>
-    <Version>0.1.0</Version>
+    <Description>A OneBot SDK for Chii Deskband</Description>
+    <Version>0.2.0</Version>
     <Authors>IchiroMihara</Authors>
+    <PackageIcon></PackageIcon>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Fleck" Version="1.2.0" />
-    <PackageReference Include="MessagePack" Version="2.3.75" />
-    <PackageReference Include="MessagePack.Annotations" Version="2.3.75" />
-    <PackageReference Include="Nancy.Hosting.Self.Standard" Version="1.0.0" />
-    <PackageReference Include="RestSharp" Version="106.12.0" />
     <PackageReference Include="System.Reactive" Version="5.0.0" />
     <PackageReference Include="System.Text.Json" Version="5.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath=""/>
   </ItemGroup>
 </Project>
